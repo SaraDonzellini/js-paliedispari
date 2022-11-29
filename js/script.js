@@ -56,19 +56,23 @@ buttonNumber.addEventListener("click", function () {
   sum = parseInt(userNumber, 10) + parseInt(pcNumber, 10);
   let even = isEven(sum);
 
-  if (userChoice !== "pari" && userChoice !== "dispari");
-    alert('inserisci "pari" o "dispari"');
+
+
 
   if (userChoice == "pari") {
     if (even) {
+      console.log(sum);
       boxResult.append('Hai vinto!');
     } else {
+      console.log(sum);
       boxResult.append('Hai perso!');
     } 
-  } else {
+  } else if (userChoice == "dispari") {
     if (!even) {
+      console.log(sum);
       boxResult.append('Hai vinto!');
     } else {
+      console.log(sum);
       boxResult.append('Hai perso!');
     }
   }
