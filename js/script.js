@@ -37,8 +37,8 @@ function isPalindrome(word) {
 
 
 //? Pari e Dispari
-//* L'utente sceglie pari o dispari e inserisce un numero da 1 a 5.
-//* Generiamo un numero random (sempre da 1 a 5) per il computer attraverso una funzione.
+//* L'utente sceglie pari o dispari e inserisce un numero da 1 a 5
+//* Generiamo un numero random (sempre da 1 a 5) per il computer attraverso una funzione
 //* Sommiamo i due numeri 
 //* Stabiliamo se la somma dei due numeri è pari o dispari attraverso un'altra funzione
 //* Dichiariamo chi ha vinto.
@@ -56,8 +56,9 @@ buttonNumber.addEventListener("click", function () {
   sum = parseInt(userNumber, 10) + parseInt(pcNumber, 10);
   let even = isEven(sum);
 
-
-
+  // if (userChoice !== "pari" && userChoice !== "dispari"); {
+  // alert('inserisci "pari" o "dispari"');
+  // }
 
   if (userChoice == "pari") {
     if (even) {
