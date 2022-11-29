@@ -27,11 +27,13 @@ function isPalindrome(word) {
       
     //! controllare se la prima metà e la seconda sono uguali
     if (word[i] !== word[length - 1 - i]) {
-      return boxPalindroma.append('Non è palindroma');
+      boxPalindroma.append('Non è palindroma');
+      return;
               
     }
   }
-  return boxPalindroma.append("E' palindroma!");
+  boxPalindroma.append("E' palindroma!");
+  return;
 
 }
 
