@@ -54,23 +54,21 @@ buttonNumber.addEventListener("click", function () {
   const userNumber = document.getElementById('numero').value;
   const pcNumber = getRandomNumber(1, 5);
   sum = parseInt(userNumber, 10) + parseInt(pcNumber, 10);
+  let even = isEven(sum);
+
+  if (userChoice !== "pari" && userChoice !== "dispari");
+    alert('inserisci "pari" o "dispari"');
 
   if (userChoice == "pari") {
-    if (isEven(sum)) {
-      console.log('hai vinto');
+    if (even) {
       boxResult.append('Hai vinto!');
-    } else if (isOdd(sum)) {
-      console.log('hai perso');
+    } else {
       boxResult.append('Hai perso!');
-    }
-  }
-
-  if (userChoice == "dispari") {
-    if (isOdd(sum)) {
-      console.log('hai vinto');
+    } 
+  } else {
+    if (!even) {
       boxResult.append('Hai vinto!');
-    } else if (isEven(sum)) {
-      console.log('hai perso');
+    } else {
       boxResult.append('Hai perso!');
     }
   }
@@ -92,9 +90,6 @@ function isEven(number) {
   return number % 2 == 0;
 }
 
-function isOdd(number) {
-  return number % 2 == 1;
-}
 
 //!
 //! 
