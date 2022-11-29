@@ -19,13 +19,13 @@ buttonWord.addEventListener("click", function () {
 
 
 function isPalindrome(word) {
-  // find the length of a string
+  //! trovare la lunghezza della parola
   const length = word.length;
   
-  // loop through half of the string
+  //! scorrere metà della parola
   for (let i = 0; i < length / 2; i++) {
       
-    // check if first and last string are same
+    //! controllare se la prima metà e la seconda sono uguali
     if (word[i] !== word[length - 1 - i]) {
       return boxPalindroma.append('Non è palindroma');
               
