@@ -11,7 +11,9 @@ buttonWord.addEventListener("click", function () {
 
 })
 
-
+//!
+//! FUNZIONI 
+//!
 //? Creare una funzione per capire se la parola inserita è palindroma
 function isPalindrome(word) {
 
@@ -35,7 +37,9 @@ function isPalindrome(word) {
     boxPalindroma.append('Non è palindroma');
   }
 }
-
+//!
+//!
+//!
 
 //? Pari e Dispari
 //* L'utente sceglie pari o dispari e inserisce un numero da 1 a 5.
@@ -78,6 +82,9 @@ buttonNumber.addEventListener("click", function () {
 
 })
 
+//!
+//! FUNZIONI 
+//!
 
 function getRandomNumber(min, max) {
   const numeroRandomico = Math.floor(Math.random() * (max - min + 1) + min);
@@ -94,3 +101,6 @@ function isOdd(number) {
   return number % 2 == 1;
 }
 
+//!
+//! 
+//!
