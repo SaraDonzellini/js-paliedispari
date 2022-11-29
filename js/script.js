@@ -1,5 +1,5 @@
 const buttonWord = document.getElementById('parolaButton');
-const boxPalindroma = document.querySelector('.boxPalindroma');
+let boxPalindroma = document.querySelector('.boxPalindroma');
 const wordArray = [];
 
 buttonWord.addEventListener("click", function () {
@@ -7,39 +7,34 @@ buttonWord.addEventListener("click", function () {
   const userWord = document.getElementById('parola').value;
   wordArray.push(userWord);
   console.log(userWord);
-  isPalindrome(userWord);
-
+  checkPalindrome(userWord);
+  
 })
 
-//!
-//! FUNZIONI 
-//!
-//? Creare una funzione per capire se la parola inserita è palindroma
-function isPalindrome(word) {
 
-  //! splitto la parola in lettere
-  const arrayValues = word.split('');
+// //!
+// //! FUNZIONI 
+// //!
+// //? Creare una funzione per capire se la parola inserita è palindroma
 
-  //! inverto l'ordine delle lettere
-  const reverseArrayValues = arrayValues.reverse();
 
-  //! riunisco le lettere in parola (stringa)
-  const reverseWord = reverseArrayValues.join('');
-
-  //! se la parola rimane uguale:
-  if (word == reverseWord) {
-    console.log('E\' palindroma!');
-    boxPalindroma.append("E' palindroma!");
+function checkPalindrome(word) {
+  // find the length of a string
+  const length = word.length;
+  
+  // loop through half of the string
+  for (let i = 0; i < length / 2; i++) {
+      
+    // check if first and last string are same
+    if (word[i] !== word[length - 1 - i]) {
+      return boxPalindroma.append('Non è palindroma');
+              
+    }
   }
-  //! altrimenti
-  else {
-    console.log('Non è palindroma');
-    boxPalindroma.append('Non è palindroma');
-  }
+  return boxPalindroma.append("E' palindroma!");
+
 }
-//!
-//!
-//!
+
 
 //? Pari e Dispari
 //* L'utente sceglie pari o dispari e inserisce un numero da 1 a 5.
