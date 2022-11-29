@@ -7,7 +7,7 @@ buttonWord.addEventListener("click", function () {
   const userWord = document.getElementById('parola').value;
   wordArray.push(userWord);
   console.log(userWord);
-  checkPalindrome(userWord);
+  isPalindrome(userWord);
   
 })
 
@@ -18,7 +18,7 @@ buttonWord.addEventListener("click", function () {
 // //? Creare una funzione per capire se la parola inserita è palindroma
 
 
-function checkPalindrome(word) {
+function isPalindrome(word) {
   // find the length of a string
   const length = word.length;
   
