@@ -1,4 +1,5 @@
 const buttonWord = document.getElementById('parolaButton');
+const boxPalindroma = document.querySelector('.boxPalindroma');
 const wordArray = [];
 
 buttonWord.addEventListener("click", function () {
@@ -25,11 +26,13 @@ function isPalindrome(word) {
 
   //! se la parola rimane uguale:
   if (word == reverseWord) {
-    console.log('It is a palindrome');
+    console.log('E\' palindroma!');
+    boxPalindroma.append("E' palindroma!");
   }
   //! altrimenti
   else {
-    console.log('It is not a palindrome');
+    console.log('Non è palindroma');
+    boxPalindroma.append('Non è palindroma');
   }
 }
 
@@ -43,6 +46,7 @@ function isPalindrome(word) {
 
 
 const buttonNumber = document.getElementById('numeroButton');
+const boxResult = document.querySelector('.boxResult');
 let sum = 0;
 
 
@@ -55,16 +59,20 @@ buttonNumber.addEventListener("click", function () {
   if (userChoice == "pari") {
     if (isEven(sum)) {
       console.log('hai vinto');
+      boxResult.append('Hai vinto!');
     } else if (isOdd(sum)) {
       console.log('hai perso');
+      boxResult.append('Hai perso!');
     }
   }
 
   if (userChoice == "dispari") {
     if (isOdd(sum)) {
       console.log('hai vinto');
+      boxResult.append('Hai vinto!');
     } else if (isEven(sum)) {
       console.log('hai perso');
+      boxResult.append('Hai perso!');
     }
   }
 
